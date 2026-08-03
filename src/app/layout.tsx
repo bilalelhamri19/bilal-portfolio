@@ -4,7 +4,7 @@ import Script from "next/script";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import SmoothScroll from "@/components/providers/smooth-scroll";
 import PageTransition from "@/components/providers/page-transition";
-import LoadingScreen from "@/components/ui/loading-screen";
+
 import CustomCursor from "@/components/ui/custom-cursor";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -155,7 +155,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LoadingScreen />
+
           <CustomCursor />
           <SmoothScroll>
             <PageTransition>
