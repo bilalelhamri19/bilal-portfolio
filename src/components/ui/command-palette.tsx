@@ -23,7 +23,6 @@ const Command = CommandPrimitive as unknown as typeof CommandPrimitive & {
   Empty: typeof CommandPrimitive.Empty;
   Group: typeof CommandPrimitive.Group;
   Item: typeof CommandPrimitive.Item;
-  Shortcut: typeof CommandPrimitive.Shortcut;
   Separator: typeof CommandPrimitive.Separator;
 };
 
