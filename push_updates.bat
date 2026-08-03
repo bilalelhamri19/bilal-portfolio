@@ -1,4 +1,4 @@
 @echo off
 git add .
-git commit -m "Remove loading screen for faster site load"
+git commit -m "Remove dark mode toggle (site is dark-only by design)"
 git push -u origin main

@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { Menu, X, Command, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navLinks, personalInfo } from "@/data/portfolio";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+
 import CommandPalette from "@/components/ui/command-palette";
 
 export default function Navbar() {
@@ -103,7 +103,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2">
               <CommandPalette />
 
-              <ThemeToggle />
+
 
               <motion.a
                 href="/cv.pdf"
