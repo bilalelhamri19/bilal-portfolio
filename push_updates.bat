@@ -1,4 +1,4 @@
 @echo off
 git add .
-git commit -m "Fix build: Disable ESLint rules-of-hooks and other changes"
+git commit -m "Fix typescript error in Lenis smooth scroll options"
 git push -u origin main
