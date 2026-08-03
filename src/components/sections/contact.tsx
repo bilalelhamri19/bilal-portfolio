@@ -60,8 +60,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          // The access key will come from environment variables in Vercel
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "",
+          access_key: "3528b1cf-0bb7-45bc-8221-5a5073eec81e",
           name: formData.name,
           email: formData.email,
           subject: formData.subject,

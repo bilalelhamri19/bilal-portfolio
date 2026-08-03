@@ -1,4 +1,4 @@
 @echo off
 git add .
-git commit -m "Make contact form working with Web3Forms"
+git commit -m "Fix contact form: hardcode Web3Forms key"
 git push -u origin main
