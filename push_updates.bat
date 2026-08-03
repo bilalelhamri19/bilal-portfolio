@@ -1,4 +1,4 @@
 @echo off
 git add .
-git commit -m "Fix framer-motion error in projects page by using Client Component"
+git commit -m "Make contact form working with Web3Forms"
 git push -u origin main

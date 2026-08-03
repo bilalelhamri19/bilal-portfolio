@@ -52,14 +52,42 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // The access key will come from environment variables in Vercel
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    setIsSubmitting(false);
-    toast.success("Message sent successfully!", {
-      description: "I'll get back to you within 24 hours.",
-      icon: <CheckCircle2 className="w-4 h-4 text-green-400" />,
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Message sent successfully!", {
+          description: "I'll get back to you within 24 hours.",
+          icon: <CheckCircle2 className="w-4 h-4 text-green-400" />,
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error("Failed to send message", {
+          description: "Please configure your Web3Forms Access Key.",
+        });
+      }
+    } catch (error) {
+      toast.error("An error occurred", {
+        description: "Please check your internet connection.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
