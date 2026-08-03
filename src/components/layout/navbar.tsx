@@ -13,9 +13,9 @@ export default function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const { scrollYProgress } = useScroll();
-  const backgroundOpacity = useTransform(scrollYProgress, [0, 0.08], [0, 0.8]);
-  const backdropBlur = useTransform(scrollYProgress, [0, 0.08], [0, 16]);
-  const borderOpacity = useTransform(scrollYProgress, [0, 0.08], [0, 0.1]);
+  const backgroundOpacity = useTransform(scrollYProgress, [0, 0.08], [0.95, 1]);
+  const backdropBlur = useTransform(scrollYProgress, [0, 0.08], [12, 20]);
+  const borderOpacity = useTransform(scrollYProgress, [0, 0.08], [0.05, 0.1]);
   const paddingY = useTransform(scrollYProgress, [0, 0.08], [16, 10]);
 
   React.useEffect(() => {
