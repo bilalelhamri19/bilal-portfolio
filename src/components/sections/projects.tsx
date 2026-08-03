@@ -33,19 +33,12 @@ export default function Projects() {
     >
       <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {projects.map((project, index) => {
-          const projectRef = React.useRef(null);
-          const projectInView = useInView(projectRef, {
-            once: true,
-            margin: "-50px",
-          });
-
           return (
             <motion.article
               key={project.id}
-              ref={projectRef}
               initial={{ opacity: 0, y: 60 }}
               animate={
-                projectInView ? { opacity: 1, y: 0 } : {}
+                inView ? { opacity: 1, y: 0 } : {}
               }
               transition={{
                 duration: 0.7,

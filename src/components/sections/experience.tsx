@@ -24,16 +24,9 @@ export default function Experience() {
         <div className="space-y-12 sm:space-y-16">
           {experiences.map((exp, index) => {
             const isLeft = index % 2 === 0;
-            const itemRef = React.useRef(null);
-            const itemInView = useInView(itemRef, {
-              once: true,
-              margin: "-50px",
-            });
-
             return (
               <div
                 key={exp.id}
-                ref={itemRef}
                 className={cn(
                   "relative flex items-start sm:items-stretch",
                   isLeft ? "sm:flex-row" : "sm:flex-row-reverse"
@@ -42,7 +35,7 @@ export default function Experience() {
                 <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 w-4 items-center justify-center z-10 top-6">
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
-                    animate={itemInView ? { scale: 1, opacity: 1 } : {}}
+                    animate={inView ? { scale: 1, opacity: 1 } : {}}
                     transition={{
                       delay: 0.3,
                       type: "spring",
@@ -58,7 +51,7 @@ export default function Experience() {
                 <div className="flex sm:hidden absolute left-4 -translate-x-1/2 w-3 items-center justify-center z-10 top-6">
                   <motion.div
                     initial={{ scale: 0 }}
-                    animate={itemInView ? { scale: 1 } : {}}
+                    animate={inView ? { scale: 1 } : {}}
                     transition={{ delay: 0.3, type: "spring" }}
                     className="w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_rgba(37,99,235,0.7)]"
                   />
@@ -71,7 +64,7 @@ export default function Experience() {
                     y: 30,
                   }}
                   animate={
-                    itemInView
+                    inView
                       ? { opacity: 1, x: 0, y: 0 }
                       : {}
                   }
@@ -126,7 +119,7 @@ export default function Experience() {
                                 key={i}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={
-                                  itemInView
+                                  inView
                                     ? { opacity: 1, x: 0 }
                                     : {}
                                 }
@@ -161,7 +154,7 @@ export default function Experience() {
                                 scale: 0.8,
                               }}
                               animate={
-                                itemInView
+                                inView
                                   ? { opacity: 1, scale: 1 }
                                   : {}
                               }

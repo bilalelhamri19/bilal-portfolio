@@ -62,17 +62,11 @@ export function Education() {
           </h3>
 
           {education.map((edu, index) => {
-            const itemRef = React.useRef(null);
-            const itemInView = useInView(itemRef, {
-              once: true,
-              margin: "-50px",
-            });
             return (
               <motion.div
                 key={edu.id}
-                ref={itemRef}
                 initial={{ opacity: 0, y: 30 }}
-                animate={itemInView ? { opacity: 1, y: 0 } : {}}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{
                   duration: 0.6,
                   delay: index * 0.1,
@@ -142,20 +136,14 @@ export function Education() {
           </h3>
           <div className="space-y-4">
             {certifications.map((cert, index) => {
-              const certRef = React.useRef(null);
-              const certInView = useInView(certRef, {
-                once: true,
-                margin: "-20px",
-              });
               return (
                 <motion.a
                   key={cert.id}
-                  ref={certRef}
                   href={cert.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, x: 30 }}
-                  animate={certInView ? { opacity: 1, x: 0 } : {}}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.2 + index * 0.1 }}
                   whileHover={{ x: 4, scale: 1.01 }}
                   className="group block relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 overflow-hidden hover:border-accent/30 transition-colors"
@@ -224,15 +212,12 @@ export function Languages() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {languages.map((lang, index) => {
-            const langRef = React.useRef(null);
-            const langInView = useInView(langRef, { once: true });
             return (
               <motion.div
                 key={lang.name}
-                ref={langRef}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={
-                  langInView
+                  inView
                     ? { opacity: 1, y: 0, scale: 1 }
                     : {}
                 }
@@ -261,7 +246,7 @@ export function Languages() {
                     <motion.div
                       initial={{ width: 0 }}
                       animate={
-                        langInView
+                        inView
                           ? { width: `${lang.proficiency}%` }
                           : {}
                       }
