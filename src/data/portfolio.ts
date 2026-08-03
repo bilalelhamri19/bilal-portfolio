@@ -117,7 +117,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Modern%20web%20application%20dashboard%20clean%20dark%20UI%20blue%20accent&image_size=landscape_16_9",
+    image: "/project_tawassol.png",
   },
   {
     id: 2,
@@ -132,7 +132,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Coding%20blog%20or%20platform%20website%20dark%20theme%20purple%20blue%20gradient&image_size=landscape_16_9",
+    image: "/project_coding_life.png",
   },
   {
     id: 3,
@@ -147,7 +147,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Hotel%20management%20dashboard%20interface%20dark%20mode%20cyan%20accent%20glassmorphism&image_size=landscape_16_9",
+    image: "/project_hotel_manager.png",
   },
   {
     id: 4,
@@ -162,7 +162,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Islamic%20platform%20website%20clean%20design%20dark%20background%20blue%20gradient&image_size=landscape_16_9",
+    image: "/project_ila_al_jannah.png",
   },
   {
     id: 5,
@@ -177,7 +177,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Scientific%20calculator%20web%20app%20clean%20dark%20ui&image_size=landscape_16_9",
+    image: "/project_calculator.png",
   },
   {
     id: 6,
@@ -192,7 +192,7 @@ export const projects = [
     endDate: "",
     github: "https://github.com/bilalelhamri19",
     liveUrl: "",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Student%20management%20system%20dashboard%20dark%20theme&image_size=landscape_16_9",
+    image: "/project_gestion_stagiaires.png",
   },
 ];
 
