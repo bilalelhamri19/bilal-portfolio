@@ -29,13 +29,13 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative scroll-mt-24 py-24 sm:py-32",
+        "relative scroll-mt-20 py-16 sm:py-24 lg:py-32",
         className
       )}
       {...props}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className="mb-16 sm:mb-20 text-center max-w-3xl mx-auto">
+        <div ref={headerRef} className="mb-10 sm:mb-16 lg:mb-20 text-center max-w-3xl mx-auto">
           {eyebrow && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export function Section({
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-display font-black tracking-tight"
+            className="text-3xl sm:text-5xl md:text-6xl font-display font-black tracking-tight"
           >
             <span className="gradient-text">{title}</span>
           </motion.h2>

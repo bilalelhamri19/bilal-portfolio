@@ -19,7 +19,7 @@ export default function Experience() {
       description="A timeline of my professional growth, impactful projects, and the teams I've had the pleasure of building with."
     >
       <div ref={ref} className="relative">
-        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+        <div className="absolute left-3 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
 
         <div className="space-y-12 sm:space-y-16">
           {experiences.map((exp, index) => {
@@ -73,7 +73,7 @@ export default function Experience() {
                     delay: 0.2 + index * 0.1,
                     ease: [0.215, 0.61, 0.355, 1],
                   }}
-                  className="w-full sm:w-[calc(50%-2rem)] ml-12 sm:ml-0 sm:mr-auto sm:pr-0"
+                  className="w-full sm:w-[calc(50%-2rem)] ml-10 sm:ml-0 sm:mr-auto sm:pr-0"
                 >
                   <div className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden card-hover">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-accent/0 group-hover:from-primary/5 group-hover:to-accent/5 transition-opacity duration-500" />

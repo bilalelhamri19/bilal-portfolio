@@ -220,7 +220,7 @@ export default function Hero() {
             Hi there, I&apos;m
           </motion.p>
 
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 sm:mb-6 leading-none">
+          <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 sm:mb-6 leading-none">
             <AnimatedTitle />
           </h1>
 
@@ -228,7 +228,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 sm:mb-10"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 sm:mb-10"
           >
             <TypewriterTitle />
           </motion.div>
@@ -237,7 +237,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="max-w-2xl text-base sm:text-lg md:text-xl text-muted leading-relaxed mb-10 sm:mb-12 text-balance"
+            className="max-w-2xl text-sm sm:text-lg md:text-xl text-muted leading-relaxed mb-8 sm:mb-12 text-balance px-2 sm:px-0"
           >
             {personalInfo.summary}
           </motion.p>
@@ -246,7 +246,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-10 sm:mb-12 w-full max-w-sm sm:max-w-none"
           >
             <motion.a
               href="#projects"
@@ -258,7 +258,7 @@ export default function Hero() {
               }}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-primary min-w-[200px]"
+              className="btn-primary sm:min-w-[180px] justify-center"
             >
               <FolderKanban className="w-5 h-5" />
               View Projects
@@ -269,7 +269,7 @@ export default function Hero() {
               download={`${personalInfo.name}-CV.pdf`}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-secondary min-w-[200px]"
+              className="btn-secondary sm:min-w-[180px] justify-center"
             >
               <Download className="w-5 h-5" />
               Download CV
@@ -285,7 +285,7 @@ export default function Hero() {
               }}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-outline min-w-[200px]"
+              className="btn-outline sm:min-w-[180px] justify-center"
             >
               <Mail className="w-5 h-5" />
               Contact Me
