@@ -98,16 +98,15 @@ function AnimatedTitle() {
 }
 
 function TypewriterTitle() {
-  const titles = [
-    personalInfo.title,
-    "Full Stack Developer",
-    "Problem Solver",
-  ];
   const [titleIndex, setTitleIndex] = React.useState(0);
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
 
   React.useEffect(() => {
+    const titles = [
+      personalInfo.title,
+      "Full Stack Developer",
+    ];
     const currentTitle = titles[titleIndex];
     const timeout = setTimeout(
       () => {
@@ -133,7 +132,7 @@ function TypewriterTitle() {
       isDeleting ? 40 : 80
     );
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, titleIndex, titles]);
+  }, [displayText, isDeleting, titleIndex]);
 
   return (
     <div className="inline-flex items-center gap-2">
